@@ -1,0 +1,4 @@
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(0,0,0,.9);
+    background: #fff;
+}       /*ESTILO SACADO CON INSPECCIONAR PARA PODER MODIFICAR LA PROPIEDAD DE BOOSTRAP ACTIVE*/

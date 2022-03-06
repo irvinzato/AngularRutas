@@ -1,0 +1,34 @@
+<p>ESTAS EN FORMULARIO</p>
+
+<pre>
+    Solicitaste la data desde un RESOLVER y tiene - {{departments}}
+</pre>
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Usuario">
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      ¿Eres mayor de 18 años?
+    </label>
+</div>
+
+<select class="form-select" aria-label="Default select example">
+    <option selected>Selecciona tu categoria</option> <!--Tambien funciona el value son los corchetes []-->
+    <option *ngFor = "let department of departments" [value]="department"> {{department}} </option>
+    <!--VAMOS A APROVECHAR LA INFORMACION MANDADA DESDE EL RESOLVER, SI AÑADO MAS INFORMACION EN EL ARREGLO DEL RESOLVER SE GENERARA DE MANERA DINAMICA AQUI-->
+    <!-- <option value="1">Front End</option>
+    <option value="2">Back End</option>
+    <option value="3">Full Stack</option> -->
+</select>
+
+<div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Deja tu comentario</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+
+<div>
+    <button class="btn btn-primary" type="submit">Enviar</button>
+</div>
